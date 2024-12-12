@@ -25,7 +25,14 @@ window.addEventListener("load", function() {
     }
         ownedFactories.push(factory);
     });
-        console.log(factory);
-});
+     console.log(ownedFactories);
+
 console.log(ownedFactories);
 
+    setInterval(function() {
+        score += ownedFactories
+        .map(x => x.count * x.isAdding)
+        .reduce((partial_sum, number) => partial_sum + number, 0);
+        scoreBlock.innerText = score;
+    }, 1000);
+});
