@@ -6,4 +6,11 @@ window.addEventListener("load", function() {
         score += 10;
         scoreBlock.innerText = score;
     }
+
+    this.document.querySelectorAll('.factory').forEach(function(fc) {
+        let factory = {
+            title: fc.querySelector('.title').innerText
+        };
+        console.log(factory);
+    });
 });
